@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="lib/ext-4.2.1.883/resources/css/ext-all.css"/>
+    <script type="text/javascript" src="lib/ext-4.2.1.883/ext-all-debug.js"></script>
+</head>
+<body>
+
+<!--<ul class="somelist">-->
+    <!--<li>one</li>-->
+    <!--<li>two</li>-->
+    <!--<li>three</li>-->
+    <!--...-->
+<!--</ul>-->
+
+<script type="text/javascript">
+
+//    Ext.create('Ext.data.Store', {
+//        storeId:'simpsonsStore',
+//        fields:['name', 'email', 'phone'],
+//        data:{'items':[
+//            { 'name': 'Lisa',  "email":"lisa@simpsons.com",  "phone":"555-111-1224"  },
+//            { 'name': 'Bart',  "email":"bart@simpsons.com",  "phone":"555-222-1234" },
+//            { 'name': 'Homer', "email":"home@simpsons.com",  "phone":"555-222-1244"  },
+//            { 'name': 'Marge', "email":"marge@simpsons.com", "phone":"555-222-1254"  }
+//        ]},
+//        proxy: {
+//            type: 'memory',
+//            reader: {
+//                type: 'json',
+//                root: 'items'
+//            }
+//        }
+//    });
+//
+//    Ext.create('Ext.grid.Panel', {
+//        title: 'Simpsons',
+//        store: Ext.data.StoreManager.lookup('simpsonsStore'),
+//        columns: [
+//            { text: 'Name',  dataIndex: 'name' },
+//            { text: 'Email', dataIndex: 'email', flex: 1 },
+//            { text: 'Phone', dataIndex: 'phone' }
+//        ],
+//        height: 200,
+//        width: 400,
+//        renderTo: Ext.getBody()
+//    });
+
+
+    //3
+
+//    var a = [
+//        'http://bryntum.com/examples-1.2.3/advanced/advanced.html',
+//        'http://bryntum.com/doc/1.2.3/foo/bar.html',
+//        'http://cdn.sencha.io/ext-3.4.0/ext-all-debug.js',
+//        'http://cdn.sencha.io/ext-3.4.0-beta-1/ext-all.js',
+//        'http://cdn.sencha.io/extjs-4.1.0-rc-1/ext-all-debug.js',
+//        'http://bryntum.com/examplesfor/extjs-4.1.1/foo/bar.html',
+//        'http://bryntum.com/library/extjs-4.1.2/ext-all-debug.js',
+//        'http://bryntum.com/library/extjs-10.11.21/ext-all-debug.js',
+//        'http://bryntum.com/library/extjs-4.1.2/ext-all-this-is-not-ext.js'
+//    ];
+//
+//    var re = /\/ext(?:js)?-(.*)\/ext-all(?:-debug)?.js$/;
+//    for(var i = 0; i < a.length; i++) {
+//        var r = re.exec(a[i]);
+//        if(r) console.log(r[1]);
+//    }
+
+    //4
+//   x = - 12;
+//    var a = [
+//    'translate3d(0, 0, 0)',
+//    'translate3d(0,    0,     0)',
+//    'translate3d(1px, 10px, 100px)',
+//    'translate3d(-1px, -10px, -100px)'
+//    ];
+//
+//    var re = /^translate3d\([\s\t]*(-?\d+|-?\d+px)[\s\t]*,[\s\t]*(-?\d+|-?\d+px)[\s\t]*,[\s\t]*(-?\d+|-?\d+px)[\s\t]*\)$/;
+//
+//    for(var i = 0; i < a.length; i++) {
+//        var r = re.exec(a[i]);
+//        if(r) console.log(r[0],r[1],r[2],r[3]);
+//    }
+
+
+    //5
+
+//    var tree = {
+//        id          : '1',
+//        children    : [
+//            {
+//                id          : '2',
+//                children    : [
+//                    {
+//                        id          : '5',
+//                        children    : [
+//                            {
+//                                id  : '9'
+//                            }
+//                        ]
+//                    },
+//                    {
+//                        id  : '6'
+//                    }
+//                ]
+//            },
+//            {
+//                id          : '3',
+//                children    : [
+//                    {
+//                        id  : '7'
+//                    },
+//                    {
+//                        id  : '8'
+//                    }
+//                ]
+//            },
+//            {
+//                id  : '4'
+//            }
+//        ]
+//    };
+//
+//    transform(tree, function(node) {
+//       console.log(node.id);
+//    });
+//
+//
+//    function transform(node, fun) {
+//        var q = [node];
+//        while((node = q.shift())){
+//            fun(node);
+//            if(node.children) {
+//                var cs = node.children;
+//                for(var i = 0, len = cs.length; i < len; i++) {
+//                    q.push(cs[i]);
+//                }
+//            }
+//        }
+//    }
+
+    // 6
+    
+
+//   var ul = document.querySelectorAll('.somelist li');
+//   console.log(ul);
+//   ul[0].onmouseover = function (e,b,x) {
+//
+//       console.log(e,b,x);
+//
+//
+//
+//   }
+
+    // 7
+
+
+    // Problem is this. It is windows? not panel object
+
+//    Ext.onReady(function () {
+//
+//        Ext.define('MyPanel', {
+//            extend : 'Ext.panel.Panel',
+//
+//            sayHello : function() { console.log('Hello world'); },
+//
+//            initComponent:function(){
+//
+//                Ext.apply(this,{
+//                    tbar : [
+//                        {
+//                            text : 'Click to say hello',
+//                            handler : this.sayHello,
+//                            scope : this
+//                        }
+//                    ]
+//                });
+//
+//                this.callParent(arguments);
+//            }
+//
+//        });
+//
+//
+//        var filterPanel = Ext.create('MyPanel', {
+//            title: 'Filters',
+//            renderTo: Ext.getBody()
+//        });
+//    });
+
+    // 8
+//    Ext.onReady(function () {
+//
+//        Ext.create('Ext.data.Store', {
+//            storeId:'simpsonsStore',
+//            fields:['name', 'email', 'phone'],
+//            data:{'items':[
+//                { 'name': 'Lisa',  "email":"lisa@simpsons.com",  "phone":"555-111-1224"  },
+//                { 'name': 'Bart',  "email":"bart@simpsons.com",  "phone":"555-222-1234" },
+//                { 'name': 'Homer', "email":"home@simpsons.com",  "phone":"555-222-1244"  },
+//                { 'name': 'Marge', "email":"marge@simpsons.com", "phone":"555-222-1254"  }
+//            ]},
+//            proxy: {
+//                type: 'memory',
+//                reader: {
+//                    type: 'json',
+//                    root: 'items'
+//                }
+//            }
+//        });
+//
+//        g = Ext.create('Ext.grid.Panel', {
+//            title: 'Simpsons',
+//            store: Ext.data.StoreManager.lookup('simpsonsStore'),
+//            columns: [
+//                { text: 'Name',  dataIndex: 'name' },
+//                { text: 'Email', dataIndex: 'email', flex: 1 },
+//                { text: 'Phone', dataIndex: 'phone' }
+//            ],
+//            height: 200,
+//            width: 400,
+//            renderTo: Ext.getBody(),
+//
+//            rowColors : {
+//                normal    : 'blue',
+//                alternate : 'white'
+//            },
+//
+//            // Updates the grid row colors
+//            setRowColors : function(normal, alternate) {
+//                this.rowColors.normal = normal;
+//                this.rowColors.alternate = alternate;
+//                this.getView().refresh();
+//            }
+//        });
+//
+//
+//    });
+
+
+    // 9
+
+    Ext.onReady(function () {
+        Ext.define('ReusableButton', {
+            extend : 'Ext.Button',
+
+            initComponent : function() {
+                this.id = 'reusable-button';  // So we can use Ext.getCmp
+                this.callParent();
+            }
+        });
+
+        Ext.define('ReusablePanel', {
+            extend : 'Ext.Panel',
+
+            initComponent : function() {
+                this.buttons = [
+                    new ReusableButton({
+                        text : 'Click me'
+                        })
+                ];
+                this.callParent();
+            }
+        });
+
+        var filterPanel = Ext.create('ReusablePanel', {
+            title: 'Filters',
+            renderTo: Ext.getBody()
+        });
+
+    });
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
